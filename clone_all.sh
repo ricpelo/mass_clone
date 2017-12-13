@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # github api reference
 # https://developer.github.com/v3/
@@ -36,8 +36,9 @@ else
 		echo "Using ssh"
 	fi
 
-	echo "Enter Github Password:"
-	read -s githubPassword
+#	echo "Enter Github Password:"
+#	read -s githubPassword
+	githubPassword=$(git config --global github.token)
 
 	# Get the first page of repo results (100 entries)
 	rawJSON=$(curl --user  "$githubUsername:$githubPassword" "https://api.github.com/orgs/$organization/repos?per_page=100" -v)

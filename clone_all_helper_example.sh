@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Runs clone_all.sh with defaults, designed to be user editable
 
@@ -17,9 +17,9 @@ else
 	assignment=$1
 
 	#edit these variables to your defaults
-	organization="Organization"
-	username="username"
-	protocol="ssh"
+	organization="iesdonana"
+	username="ricpelo"
+	protocol="https"
 
 	./clone_all.sh ${organization} ${assignment} ${username} ${protocol}
 fi
